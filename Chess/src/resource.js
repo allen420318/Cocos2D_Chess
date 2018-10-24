@@ -30,6 +30,9 @@ var res = {
     chess_plist : "res/chess.plist",
     select_png : "res/select.png",
     royal_png : "res/royal.png",
+    title_png : "res/title.png",
+    winB_png : "res/winB.png",
+    winR_png : "res/winR.png",
 };
 
 var g_resources = [];

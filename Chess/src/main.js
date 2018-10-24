@@ -11,9 +11,9 @@ var MainLayer = cc.Layer.extend({
     royalB:null,
     redwin:null,
     blackwin:null,
-    chessback:new Array(32),
     chessrects:new Array(32),
     allselect:false,
+    chessback:new Array(32),
     chess:[{num:0,val:7},{num:1,val:6},{num:2,val:6},{num:3,val:5},{num:4,val:5},{num:5,val:4},
            {num:6,val:4},{num:7,val:3},{num:8,val:3},{num:9,val:2},{num:10,val:2},{num:11,val:1},
            {num:12,val:1},{num:13,val:1},{num:14,val:1},{num:15,val:1},{num:17,val:7},{num:18,val:6},
@@ -68,35 +68,38 @@ var MainLayer = cc.Layer.extend({
 
         }
 
-        //暗棋遊戲
-        this.title = new cc.LabelTTF("暗棋遊戲","",48);
+        //暗棋風雲
+        // this.title = new cc.LabelTTF("暗棋風雲","",48);
+        this.title = new cc.Sprite(res.title_png);
         this.title.x = cc.winSize.width / 2;
         this.title.y = cc.winSize.height * 14.7 / 16;
         this.addChild(this.title);
 
         //紅棋獲勝
-        this.redwin = new cc.LabelTTF("紅棋獲勝","",44);
+        this.redwin = new cc.Sprite(res.winR_png);
+        // this.redwin = new cc.LabelTTF("紅棋獲勝","",44);
         this.redwin.x = cc.winSize.width / 2;
         this.redwin.y = cc.winSize.height * 1.3 / 16;
         this.addChild(this.redwin);
         this.redwin.setVisible(false);
 
         this.royalR = new cc.Sprite(res.royal_png);
-        this.royalR.x = cc.winSize.width * 0.7 / 2;
-        this.royalR.y = cc.winSize.height * 1.3 / 16;
+        this.royalR.x = cc.winSize.width * 0.68 / 2;
+        this.royalR.y = cc.winSize.height * 1.4 / 16;
         this.addChild(this.royalR);
         this.royalR.setVisible(false);
 
         //黑棋獲勝
-        this.blackwin = new cc.LabelTTF("黑棋獲勝","",44);
+        this.blackwin = new cc.Sprite(res.winB_png);
+        // this.blackwin = new cc.LabelTTF("黑棋獲勝","",44);
         this.blackwin.x = cc.winSize.width / 2;
         this.blackwin.y = cc.winSize.height * 1.3 / 16;
         this.addChild(this.blackwin);
         this.blackwin.setVisible(false);
 
         this.royalB = new cc.Sprite(res.royal_png);
-        this.royalB.x = cc.winSize.width * 0.7 / 2;
-        this.royalB.y = cc.winSize.height * 1.3 / 16;
+        this.royalB.x = cc.winSize.width * 0.68 / 2;
+        this.royalB.y = cc.winSize.height * 1.4 / 16;
         this.addChild(this.royalB);
         this.royalB.setVisible(false);
 
