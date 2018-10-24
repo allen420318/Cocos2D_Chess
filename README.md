@@ -1,1 +1,0 @@
-# allen420318-Cocos2D_Chess
